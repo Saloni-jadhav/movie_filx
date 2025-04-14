@@ -1,0 +1,21 @@
+.back{
+    background-image: url("../img/back2.jpg");
+    background-size: cover;
+    height: 1380px;
+    padding-top: 60px;
+    position: relative;
+    padding-left: 80px;
+    color: white;
+    
+}
+.card_cntr{
+    display: flex;
+    flex-wrap: wrap; /* to allow wrapping on small screens */
+    gap: 20px; /* spacing between cards */
+    justify-content: center; /* center horizontally */
+    padding: 20px;
+
+}
+/* .outer{
+    color: white;
+} */

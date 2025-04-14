@@ -1,0 +1,26 @@
+.card{
+    width: 250px;
+    height: 350px;
+    color: rgb(8, 8, 8);
+    font-size: 20px;
+    margin-top: 20px;
+    /* background-image: url("../img/image1.jpg"); */
+    color: white;
+    text-align: center;
+}
+.card img{
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 350px;
+    color: white;
+}
+.card:hover{
+    transform: rotate(1deg) scale(1.03);
+}
+.card p{
+    background-color: white;
+    height: 50px;
+    width: 250px;
+   color: black;
+   text-align: center;
+}
