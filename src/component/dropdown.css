@@ -1,38 +1,54 @@
-/* Custom CSS for Movie Cards */
+
+  /* Custom CSS for Movie Cards */
 .movie-card {
     height: 350px; /* Fixed height for uniformity */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-  
-  .movie-card:hover {
+    position: relative; /* Added for absolute positioning of text */
+}
+
+.movie-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .movie-card img {
-    height: 350px;
+}
+
+.movie-card img {
+    height: 100%; /* Changed to 100% to fill the card */
+    width: 100%;
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .card-title {
+}
+
+/* This will position the text overlay on top of the image */
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .card-body {
+    transform: translateY(0); /* Show on hover */
+}
+
+.card-title {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-  }
-  
-  .card-text {
+    color: white; /* Changed to white for better visibility */
+}
+
+.card-text {
     font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .row {
+    color: #ddd; /* Lighter color for better visibility */
+}
+
+.row {
     margin: 0;
-  }
-  
+}
