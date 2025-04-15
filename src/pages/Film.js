@@ -60,7 +60,8 @@ function BasicExample1() {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const url = "https://omdbapi.com/?apikey=4e9e8ed7&s=series";
+        // const url = "https://omdbapi.com/?apikey=4e9e8ed7&s=series";
+        const url = "https://www.omdbapi.com/?apikey=c848f0d8&s=movie&y=2024";
         const userResult = await axios.get(url);
         console.log(userResult, "<=====result");
         setData1(userResult.data.Search);
@@ -87,11 +88,11 @@ function BasicExample1() {
           </h4>
           <Dropdown1 />
 
-          <div className="card_cntr">
+          {/* <div className="card_cntr">
             {Data1.map((movieData) => (
               <BasicExample2 key={movieData.imdbID} data={movieData} />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </>
