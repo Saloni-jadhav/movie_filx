@@ -4,9 +4,10 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./dropdown.css";
-import TvShow from "../pages/TvShow";
-function Dropdown1() {
+import "./TvShow.css";
+import NavScrollExample from "../component/nav1";
+ 
+function TvShow() {
   const [selectedYear, setSelectedYear] = useState("2024");
   const [movies, setMovies] = useState([]);
   const [message, setMessage] = useState("");
@@ -19,7 +20,7 @@ function Dropdown1() {
 
     try {
       const response = await axios.get(
-        `https://omdbapi.com/?apikey=c848f0d8&s=movie&y=${year}`
+        `https://omdbapi.com/?apikey=4e9e8ed7&s=series&y=${year}`
       );
       if (response.data && response.data.Search) {
         setMovies(response.data.Search);
@@ -52,7 +53,16 @@ function Dropdown1() {
     setSelectedMovie(null);
   };
 
-  return (
+  return ( 
+   <>
+    < NavScrollExample/>
+    <div className="back">
+          <h1>
+            <b>Recent 2024 TV Shows</b>
+          </h1>
+          <h4>
+            <b>Select Year</b>
+          </h4>
     <div className="container my-4">
       <Dropdown>
         <Dropdown.Toggle variant="light">
@@ -125,7 +135,9 @@ function Dropdown1() {
         )}
       </Modal>
     </div>
+    </div>
+    </>
   );
 }
 
-export default Dropdown1;
+export default TvShow;

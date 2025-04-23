@@ -1,50 +1,4 @@
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-// import Film from '../pages/Film';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import logo from '../img/download.png'
-// import { Form } from 'react-bootstrap';
-// import Button from 'react-bootstrap';
-// function CollapsibleExample() {
-//   return (
-    
-//     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-      
-//       <Container>
-//         <img src={logo} style={{ width: "50px", height: "30px" }}/>
-//         <Navbar.Brand href="#home"><b>Home</b></Navbar.Brand>
-//         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//         <Navbar.Collapse id="responsive-navbar-nav">
-//           <Nav className="me-auto">
-//             <Nav.Link href="#Film"><b>TV Show</b></Nav.Link>
-//             <NavDropdown title="Movies" id="collapsible-nav-dropdown">
-//               <NavDropdown.Item href="#new & popular">New & Popular</NavDropdown.Item>
-//               <NavDropdown.Item href="#my list">
-//                My List
-//               </NavDropdown.Item>
-//             </NavDropdown>
-//           </Nav>
-//           <Form className="d-flex">
-//             <Form.Control
-//               type="search"
-//               placeholder="Search"
-//               className="me-2"
-//               aria-label="Search"
-//             />
-//             <Button variant="outline-success">Search</Button>
-//           </Form>
-//           {/* <Nav>
-//             <Nav.Link href="#Search"><b>Search</b></Nav.Link>
-//           </Nav> */}
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// }
 
-// export default CollapsibleExample;
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -53,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../img/movie logo.png';
-
+import TvShow from '../pages/TvShow';
 
 function NavScrollExample() {
   return (
@@ -67,8 +21,8 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1"><b>Home</b></Nav.Link>
-            <Nav.Link href="#action2"><b>Tv Shows</b></Nav.Link>
+            <Nav.Link href="/"><b>Home</b></Nav.Link>
+            <Nav.Link href="/TvShow"><b>Tv Shows</b></Nav.Link>
             <Nav.Link href="#action1"><b>Movies</b></Nav.Link>
             <Nav.Link href="#action2"><b>New & Popular</b></Nav.Link>
             <Nav.Link href="#action2"><b>My List</b></Nav.Link>
